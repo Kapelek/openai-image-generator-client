@@ -1,0 +1,15 @@
+.confirm-btn{
+    padding: 5px 10px;
+    max-width: 100px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    background-color: rgb(97, 188, 1);
+    display: inline-block;
+    transition: 0.2s;
+}
+
+.confirm-btn:hover{
+    background-color: rgb(83, 158, 2);
+    cursor: pointer;
+    transition: 0.2s;
+}
