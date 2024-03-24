@@ -1,19 +1,22 @@
-import GeneratedPhotoContainer from "../../components/generated-photo-container/GeneratedPhotoContainer";
-import PromptInputLine from "../../components/prompt-input-line/PromptInputLine";
 import axios from "axios";
 import { useState } from "react";
-import UseLocalStorage from "../../hooks/UseLocalStorage";
 import { ImageObject } from "../../types";
 import AllImagesContainer from "../../components/all-images-container/AllImagesContainer";
+import GenerationContainer from "../../components/generation-container/GenerationContainer";
+import ImageDetailsOverlay from "../../components/image-details-overlay/ImageDetailsOverlay";
+import { GlobalContext } from "../../contexts/GlobalContext";
+import { useContext } from "react";
 
 const Generation = () => {
+  const { appendToImages } = useContext(GlobalContext);
   const [imgSrc, setImgSrc] = useState<String>("");
   const [errorMessage, setErrorMessage] = useState<String>("");
-  const { appendImages } = UseLocalStorage();
+  const [isImgGenerating, setIsImgGenerating] = useState<Boolean>(false);
 
   const imgSrcBase = "data:image/jpg;base64,";
 
   const generateNewImage = (prompt: string): any => {
+    setIsImgGenerating(true);
     setErrorMessage("");
     axios
       .get("/image-generation?prompt=" + prompt)
@@ -24,22 +27,29 @@ const Generation = () => {
           src: src,
           prompt: prompt,
           favourite: false,
+          title: prompt,
+          description: "No description",
         };
         setImgSrc(src);
-        appendImages(newImage);
+        appendToImages(newImage);
+        setIsImgGenerating(false);
       })
       .catch((error) => {
-        setErrorMessage("Something went wrong!");
+        setErrorMessage("Something went wrong! Try again!");
+        setIsImgGenerating(false);
       });
   };
 
   return (
     <>
-      <h1>Generation</h1>
-      <PromptInputLine generateNewImage={generateNewImage}></PromptInputLine>
-      {errorMessage ? errorMessage : ""}
-      <GeneratedPhotoContainer imgSrc={imgSrc}></GeneratedPhotoContainer>
+      <GenerationContainer
+        generateNewImage={generateNewImage}
+        errorMessage={errorMessage}
+        imgSrc={imgSrc}
+        isImgGenerating={isImgGenerating}
+      ></GenerationContainer>
       <AllImagesContainer></AllImagesContainer>
+      <ImageDetailsOverlay></ImageDetailsOverlay>
     </>
   );
 };

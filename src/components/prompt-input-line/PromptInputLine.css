@@ -2,4 +2,19 @@
     outline: none;
     padding: 5px 5px;
     margin-right: 5px;
+    width:250px;
+}
+
+.prompt-input-line{
+    padding: 20px 0px;
+    box-sizing: border-box;
+}
+
+.generation-error-message{
+    margin-top:15px;
+    color:rgb(149, 9, 9);
+    font-size: 12px;
+    background-color: rgb(187, 74, 74);
+    padding:7.5px;
+    margin-bottom: 0px;
 }

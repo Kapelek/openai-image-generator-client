@@ -3,4 +3,6 @@ export interface ImageObject {
   src: string;
   prompt: string;
   favourite: boolean;
+  title:string;
+  description:string;
 }

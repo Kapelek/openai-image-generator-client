@@ -1,0 +1,25 @@
+.generation-container{
+    background-color: #dfdfdf;
+}
+
+.container-title{
+    margin:0;
+    background-color: rgb(203, 203, 203);
+    padding: 10px 0px;
+    box-shadow: 1px 8px 10px 0px rgba(126, 126, 126, 1);
+}
+
+.container-title-up{
+    font-size: 25px;
+    color:#565656;
+
+}
+
+.container-title-down{
+    font-size: 18px;
+    color:#707070;
+}
+
+.container-title-up,.container-title-down{
+    margin: 0px;
+}

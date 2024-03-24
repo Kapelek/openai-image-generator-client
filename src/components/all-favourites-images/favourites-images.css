@@ -1,4 +1,4 @@
-.all-images-container {
+.all-fimages-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(256px, 256px));
   grid-gap: 20px;
@@ -8,4 +8,5 @@
   background-color: #35374B;
   padding:20px;
   box-sizing: border-box;
-}
+  }
+  
