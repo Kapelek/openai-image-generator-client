@@ -4,7 +4,7 @@
 
 > ### 💡 Unfortunately, there is no documentation in English, so let me introduce this app quickly here:
 ### OpenAI Image Generator is a tool for creating images by prompting AI using API shared by OpenAI. 
-### Client was made in React. It provides possibilities like generating photos, displaying them in the gallery and managing them.
+### Client was made in React. It offers features such as generating photos, displaying them in a gallery, and managing them.
 ### Back-end was made in NestJS. It is used to make API calls between Client and OpenAI.
 <hr>
 <br>
