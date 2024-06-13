@@ -1,6 +1,6 @@
 > ### 🟣 [DOCUMENTATION IN POLISH HERE](https://github.com/Kapelek/openai-image-generator-server/blob/main/OpenAI%20Image%20Generator%20-%20documentation%20PL.pdf)
 
-> ### 🟠 In order to achieve full-functionality of the app you need to set up server-side app [here](https://github.com/Kapelek/openai-image-generator-server)
+> ### 🟠 In order to achieve full-functionality of the app you need to set up server-side app [here](https://github.com/Kapelek/openai-image-generator-server) also
 <hr>
 <br>
 
