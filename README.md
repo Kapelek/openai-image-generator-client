@@ -1,6 +1,11 @@
 > ### 🟣 [DOCUMENTATION IN POLISH HERE](https://github.com/Kapelek/openai-image-generator-server/blob/main/OpenAI%20Image%20Generator%20-%20documentation%20PL.pdf)
 
 > ### 🟠 In order to achieve full-functionality of the app you need to set up server-side app also [here](https://github.com/Kapelek/openai-image-generator-server)
+
+> ### 💡 Unfortunately, there is no documentation in English, so let me introduce this app quickly here:
+### OpenAI Image Generator is a tool for creating images by prompting AI using API shared by OpenAI. 
+### Client was made in React. It provides possibilities like generating photos, displaying them in the gallery and managing them.
+### Back-end was made in NestJS. It is used to make API calls between Client and OpenAI.
 <hr>
 <br>
 
